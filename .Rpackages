@@ -1,0 +1,39 @@
+#  "describedisplay" = "~/ggobi/describedisplay",
+#  "tourr" =    "~/documents/tour/tourr", 
+#  "mutatr" = "~/documents/oo/mutatr"
+
+list(
+    default = function(x) {
+      locations <- c(
+        file.path("~/Dropbox/git",x,x),
+        file.path("~/Dropbox/metamarkets", "gitMMX", x, x),
+        file.path("~/Dropbox/ggobi-svn",x,x),
+        file.path("~/Dropbox/git","ggobi",x,x),
+	file.path("~/Dropbox/metamarkets/hornerGit/", x, x)
+
+      )
+      
+      for(i in seq_along(locations)) {
+        if (length(suppressWarnings(dir(locations[i]))) > 0) {
+          return(locations[i]);
+        }        
+      }
+      
+#      path <- file.path("~/Dropbox/git", x, x)     
+#      if (length(suppressWarnings(dir(path))) > 0) {
+#        return(path);
+#      } 
+#      else{
+#        path <- file.path("~/Dropbox/ggobi-svn", x, x)
+#        if (length(suppressWarnings(dir(path))) > 0) {
+#          path
+#        } else {
+#          file.path("~/Dropbox/git", "ggobi", x)
+#        }
+#      }      
+#    }
+#    "devtools" = "~/Dropbox/git/devtools", 
+#    "helpr" = "~/Dropbox/git/helpr", 
+#    "sinartra" = "~/Dropbox/git/sinartra"
+  }
+)
