@@ -1,3 +1,14 @@
+# ~/.profile: executed by Bourne-compatible login shells.
+
+if [ "$BASH" ]; then
+  if [ -f ~/.bashrc ]; then
+    . ~/.bashrc
+  fi
+fi
+
+mesg n
+
+
 alias R='R --no-save --no-restore-data --quiet'
 alias ftpcran="ftp -u ftp://cran.R-project.org/incoming/"
 alias st='git status'
